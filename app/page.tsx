@@ -10,7 +10,7 @@ import {
     Group,
     SimpleGrid,
     AspectRatio,
-    Stack, Tabs, Button, Flex, ActionIcon, Grid,
+    Stack, Tabs, Button, Flex, ActionIcon,
 } from '@mantine/core';
 import React from "react";
 import Panel1 from "@/app/tab/panel1";
