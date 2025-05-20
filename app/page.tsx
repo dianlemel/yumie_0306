@@ -1,95 +1,121 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client';
 
-export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+import classes from "./page.module.css";
+import {BsTwitterX, BsTwitch, BsInstagram, BsYoutube, BsFacebook} from "react-icons/bs";
+import {
+    Container,
+    Title,
+    Text,
+    Progress,
+    Group,
+    SimpleGrid,
+    AspectRatio,
+    Stack, Tabs, Button, Flex, ActionIcon, Grid,
+} from '@mantine/core';
+import React from "react";
+import Panel1 from "@/app/tab/panel1";
+import Panel2 from "@/app/tab/panel2";
+import Panel3 from "@/app/tab/panel3";
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+function App() {
+
+    const onClick = () => {
+        window.open('https://p.ecpay.com.tw/FC73A75')
+    };
+
+    return (
+        <Container size="lg" py="xl" h='100vh'>
+            <Stack gap="ms">
+                <Flex align="center" justify="flex-end" gap={10}>
+                    <ActionIcon component="a" href="https://x.com/Yumie03060"
+                                gradient={{from: 'indigo', to: 'indigo', deg: 90}}>
+                        <BsTwitterX/>
+                    </ActionIcon>
+                    <ActionIcon component="a" href="https://www.twitch.tv/yumie0306"
+                                gradient={{from: 'indigo', to: 'indigo', deg: 90}}>
+                        <BsTwitch/>
+                    </ActionIcon>
+                    <ActionIcon component="a" href="https://www.instagram.com/yumie_0306"
+                                gradient={{from: 'indigo', to: 'indigo', deg: 90}}>
+                        <BsInstagram/>
+                    </ActionIcon>
+                    <ActionIcon component="a" href="https://www.youtube.com/@yumie0306"
+                                gradient={{from: 'indigo', to: 'indigo', deg: 90}}>
+                        <BsYoutube/>
+                    </ActionIcon>
+                    <ActionIcon component="a" href="https://www.facebook.com/profile.php?id=61561110333672"
+                                gradient={{from: 'indigo', to: 'indigo', deg: 90}}>
+                        <BsFacebook/>
+                    </ActionIcon>
+                </Flex>
+                <SimpleGrid cols={{base: 1, sm: 2}}>
+                    <AspectRatio display='flex' ratio={16 / 9}>
+                        <iframe src="https://www.youtube.com/embed/K1yw6np-SBE"
+                                title="【初配信預告】地球上的人類們!  槍拿好!  你準備好了嗎?  雨咩うさぎ- 即將降臨地球!"
+                                style={{border: "none", borderRadius: "10px"}}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerPolicy="strict-origin-when-cross-origin" allowFullScreen/>
+                    </AspectRatio>
+                    <Stack>
+                        <Title order={1} size="h2">【初配信預告】地球上的人類們!  槍拿好!  你準備好了嗎?  雨咩うさぎ- 即將降臨地球!</Title>
+                        <div>
+                            <Text size="lg">TEST</Text>
+                            <Text size="md" c="dimmed">
+                                TEST
+                            </Text>
+                        </div>
+                        <div>
+                            <Text>已募資金額：$0 / $200,000</Text>
+                            <Progress value={0}/>
+                            <Group mt="xs">
+                                <Text size="sm">參與人數：0人</Text>
+                                <Text size="sm">剩餘時間：0天</Text>
+                            </Group>
+                        </div>
+                    </Stack>
+                </SimpleGrid>
+                <Tabs variant="1" defaultValue="1">
+                    <Group justify="space-between"
+                           bg='white'
+                           style={{
+                               border: '1px solid #EDECF2',
+                               borderRadius: '10px',
+                               padding: '0.5rem',
+                           }}>
+                        <Tabs.List className={classes.list}>
+                            <Tabs.Tab value="1" className={classes.tab}>
+                                介紹
+                            </Tabs.Tab>
+                            <Tabs.Tab value="2" className={classes.tab}>
+                                常見問題
+                            </Tabs.Tab>
+                            <Tabs.Tab value="3" className={classes.tab}>
+                                須知
+                            </Tabs.Tab>
+                        </Tabs.List>
+                        <Button onClick={onClick} visibleFrom="sm" variant="filled">贊助</Button>
+                    </Group>
+
+                    <Tabs.Panel value="1"><Panel1/></Tabs.Panel>
+                    <Tabs.Panel value="2"><Panel2/></Tabs.Panel>
+                    <Tabs.Panel value="3"><Panel3/></Tabs.Panel>
+                </Tabs>
+                <Container hiddenFrom="sm" h={50}/>
+            </Stack>
+            <Container bg='white'
+                       hiddenFrom="sm"
+                       p={10}
+                       style={{
+                           position: "fixed",
+                           bottom: "0px",
+                           right: "0px",
+                           left: "0px",
+                           borderTop: "1px solid #EDECF2",
+                       }}>
+                <Button fullWidth onClick={onClick} variant="filled">贊助</Button>
+            </Container>
+        </Container>
+    );
 }
+
+export default App;
