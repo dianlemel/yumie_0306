@@ -10,7 +10,7 @@ import {
     Group,
     SimpleGrid,
     AspectRatio,
-    Stack, Tabs, Button, Flex, ActionIcon,
+    Stack, Tabs, Button, Flex, ActionIcon, Image
 } from '@mantine/core';
 import React from "react";
 import Panel1 from "@/app/tab/panel1";
@@ -50,14 +50,11 @@ function App() {
                 </Flex>
                 <SimpleGrid cols={{base: 1, sm: 2}}>
                     <AspectRatio display='flex' ratio={16 / 9}>
-                        <iframe src="https://www.youtube.com/embed/K1yw6np-SBE"
-                                title="【初配信預告】地球上的人類們!  槍拿好!  你準備好了嗎?  雨咩うさぎ- 即將降臨地球!"
-                                style={{border: "none", borderRadius: "10px"}}
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerPolicy="strict-origin-when-cross-origin" allowFullScreen/>
+                        <Image radius="md" src="page1.webp"/>
                     </AspectRatio>
                     <Stack>
-                        <Title order={1} size="h2">【初配信預告】地球上的人類們!  槍拿好!  你準備好了嗎?  雨咩うさぎ- 即將降臨地球!</Title>
+                        <Title order={1} size="h2">【初配信預告】地球上的人類們! 槍拿好! 你準備好了嗎? 雨咩うさぎ-
+                            即將降臨地球!</Title>
                         <div>
                             <Text size="lg">TEST</Text>
                             <Text size="md" c="dimmed">
