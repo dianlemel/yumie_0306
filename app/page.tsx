@@ -54,7 +54,8 @@ function App() {
                     </AspectRatio>
                     <Stack>
                         <Title order={1} size="h2">【初配信預告】地球上的人類們! 槍拿好! 你準備好了嗎? 雨咩うさぎ-
-                            即將降臨地球!</Title>
+                            即將降臨地球!
+                        </Title>
                         <div>
                             <Text size="lg">TEST</Text>
                             <Text size="md" c="dimmed">
@@ -74,6 +75,7 @@ function App() {
                 <Tabs variant="1" defaultValue="1">
                     <Group justify="space-between"
                            bg='white'
+                           mb='sm'
                            style={{
                                border: '1px solid #EDECF2',
                                borderRadius: '10px',
