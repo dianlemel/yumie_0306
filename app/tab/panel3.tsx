@@ -32,7 +32,9 @@ function Tab1() {
             </Text>
             <Divider my="md"/>
             <Title order={5}>免責聲明</Title>
-            <List>
+            <List
+                size="sm"
+                withPadding>
                 <List.Item>本網站所提供之募資活動內容，皆由活動發起人自行提供，並負責其真實性與執行。</List.Item>
                 <List.Item>支持者在贊助前請自行評估風險，並理解募資並非購買行為，無法保證回饋項目會如期完成與交付。</List.Item>
                 <List.Item>若有任何問題，請直接聯繫活動發起人。</List.Item>
