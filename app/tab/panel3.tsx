@@ -27,8 +27,17 @@ function Tab1() {
             </Highlight>
             <Divider my="md"/>
             <Title order={5}>客服聯絡方式</Title>
-            <Text>如有任何聯絡需求，請寄信至團隊信箱（yumie10306@gmail.com），我們將盡快與您聯繫，謝謝。
-                須知可以上了</Text>
+            <Text>
+                如有任何聯絡需求，請寄信至團隊信箱（yumie10306@gmail.com），我們將盡快與您聯繫，謝謝。
+            </Text>
+            <Divider my="md"/>
+            <Title order={5}>免責聲明</Title>
+            <List>
+                <List.Item>本網站所提供之募資活動內容，皆由活動發起人自行提供，並負責其真實性與執行。</List.Item>
+                <List.Item>支持者在贊助前請自行評估風險，並理解募資並非購買行為，無法保證回饋項目會如期完成與交付。</List.Item>
+                <List.Item>若有任何問題，請直接聯繫活動發起人。</List.Item>
+                <List.Item>本網站僅提供平台展示服務，對募資內容及執行不承擔任何法律責任。</List.Item>
+            </List>
         </Stack>
     );
 }

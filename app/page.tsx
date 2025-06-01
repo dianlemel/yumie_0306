@@ -53,8 +53,8 @@ function App() {
                         <Image radius="md" src="page1.webp"/>
                     </AspectRatio>
                     <Stack>
-                        <Title order={1} size="h2">【初配信預告】地球上的人類們! 槍拿好! 你準備好了嗎? 雨咩うさぎ-
-                            即將降臨地球!
+                        <Title order={1} size="h2">
+                            【雨咩うさぎ 】Vtuber 2.0 大躍進募資活動
                         </Title>
                         <div>
                             <Text size="lg">TEST</Text>
@@ -99,7 +99,7 @@ function App() {
                     <Tabs.Panel value="2"><Panel2/></Tabs.Panel>
                     <Tabs.Panel value="3"><Panel3/></Tabs.Panel>
                 </Tabs>
-                <Container hiddenFrom="sm" h={50}/>
+                <Container h={50}/>
             </Stack>
             <Container bg='white'
                        hiddenFrom="sm"
