@@ -43,7 +43,7 @@ const charactersList = [
         content: (
             <Stack align="stretch" justify="flex-start">
                 <Text
-                    size="sm">周邊開始製作條件為募資達標20W後，會開始製作紀念週邊，外套為訂製款會有小幫手聯絡買家詢問尺寸等詳細資訊，周邊製作及準備至少需要3個月時間。</Text>
+                    size="sm">周邊開始製作條件為募資達標20萬後，會開始製作紀念週邊，外套為訂製款會有小幫手聯絡買家詢問尺寸等詳細資訊，周邊製作及準備至少需要3個月時間。</Text>
             </Stack>
         ),
     },
