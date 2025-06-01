@@ -5,10 +5,10 @@ function Panel1() {
     return (
         <Stack align="Center" justify="flex-start">
             <Container size="sm">
-                <Image radius="md" src="page2.jpg"/>
+                <Image radius="md" src="page3.png"/>
             </Container>
             <Container size="sm">
-                <Image radius="md" src="page3.png"/>
+                <Image radius="md" src="page2.jpg"/>
             </Container>
         </Stack>
     );
