@@ -10,7 +10,7 @@ function Tab1() {
                 withPadding
                 size="sm"
                 icon={<BsStar size={15}/>}>
-                <List.Item>2.0募資紀念品需在20w達標後才會開始製作。</List.Item>
+                <List.Item>2.0募資紀念品需在20萬達標後才會開始製作。</List.Item>
                 <List.Item>2.0募資之回饋紀念品於到貨次日起七天內需確認紀念品是否有瑕疵。</List.Item>
                 <List.Item>包裹開箱務必「全程錄影」，遇到商品瑕疵破損時出示錄影畫面才能做退換貨。</List.Item>
                 <List.Item>大量印刷之微小偏移及細小刷點、擦點不屬於瑕疵，完美主義者請勿下單。</List.Item>
