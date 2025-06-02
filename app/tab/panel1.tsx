@@ -27,14 +27,6 @@ function Panel1() {
                 </Stack>
             </Paper>
             <Divider my="md"/>
-            <Container size="sm">
-                <Image radius="md" src="page3.png"/>
-            </Container>
-            <Divider my="md"/>
-            <Container size="sm">
-                <Image radius="md" src="page2.jpg"/>
-            </Container>
-            <Divider my="md"/>
             <Flex
                 justify="center"
                 align="center"
@@ -47,6 +39,14 @@ function Panel1() {
                     </Group>
                 </UnstyledButton>
             </Flex>
+            <Divider my="md"/>
+            <Container size="sm">
+                <Image radius="md" src="page3.png"/>
+            </Container>
+            <Divider my="md"/>
+            <Container size="sm">
+                <Image radius="md" src="page2.jpg"/>
+            </Container>
             <Divider my="md"/>
         </Stack>
     );
