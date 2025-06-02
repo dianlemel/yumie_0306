@@ -28,6 +28,10 @@ function Panel1() {
             </Paper>
             <Divider my="md"/>
             <Container size="sm">
+                <Image radius="md" src="page3.png"/>
+            </Container>
+            <Divider my="md"/>
+            <Container size="sm">
                 <Image radius="md" src="page2.jpg"/>
             </Container>
             <Divider my="md"/>
