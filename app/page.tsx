@@ -12,12 +12,26 @@ import {
     AspectRatio,
     Stack, Tabs, Button, Flex, ActionIcon, Image
 } from '@mantine/core';
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Panel1 from "@/app/tab/panel1";
 import Panel2 from "@/app/tab/panel2";
 import Panel3 from "@/app/tab/panel3";
 
 function App() {
+    const [funding, setFunding] = useState({current: 0, total: 2000000, people: 0});
+
+    useEffect(() => {
+        fetch('https://dns.google/resolve?name=yumie0306.config.dianlemel.taipei&type=TXT')
+            .then(res => res.json())
+            .then(res => {
+                const text = res.Answer?.[0]?.data?.replace(/"/g, '').replace(/'/g, '"');
+                if (text) setFunding(JSON.parse(text));
+            })
+            .catch(() => {});
+    }, []);
+
+    const percent = funding.total > 0 ? (funding.current / funding.total) * 100 : 0;
+    const fmt = (n: number) => n.toLocaleString('zh-TW');
 
     const onClick = () => {
         window.open('https://p.ecpay.com.tw/FC73A75')
@@ -50,24 +64,23 @@ function App() {
                 </Flex>
                 <SimpleGrid cols={{base: 1, sm: 2}}>
                     <AspectRatio display='flex' ratio={16 / 9}>
-                        <Image radius="md" src="page1.webp"/>
+                        <Image radius="md" src="page1.jpg"/>
                     </AspectRatio>
                     <Stack>
                         <Title order={1} size="h2">
                             【雨咩うさぎ 】Vtuber 2.0 大躍進募資活動
                         </Title>
+                        {/*<div>*/}
+                        {/*    <Text size="lg">TEST</Text>*/}
+                        {/*    <Text size="md" c="dimmed">*/}
+                        {/*        TEST*/}
+                        {/*    </Text>*/}
+                        {/*</div>*/}
                         <div>
-                            <Text size="lg">TEST</Text>
-                            <Text size="md" c="dimmed">
-                                TEST
-                            </Text>
-                        </div>
-                        <div>
-                            <Text>已募資金額：$0 / $200,000</Text>
-                            <Progress value={0}/>
+                            <Text>已募資金額：${fmt(funding.current)} / ${fmt(funding.total)}</Text>
+                            <Progress value={percent}/>
                             <Group mt="xs">
-                                <Text size="sm">參與人數：0人</Text>
-                                <Text size="sm">剩餘時間：0天</Text>
+                                <Text size="sm">參與人數：{funding.people}人</Text>
                             </Group>
                         </div>
                     </Stack>

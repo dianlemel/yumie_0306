@@ -45,7 +45,7 @@ function Panel1() {
             </Container>
             <Divider my="md"/>
             <Container size="sm">
-                <Image radius="md" src="page2.jpg"/>
+                <Image radius="md" src="page2.png"/>
             </Container>
             <Divider my="md"/>
         </Stack>
