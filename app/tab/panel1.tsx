@@ -41,7 +41,7 @@ function Panel1() {
             </Flex>
             <Divider my="md"/>
             <Container size="sm">
-                <Image radius="md" src="page3.png"/>
+                <Image radius="md" src="page3.jpg"/>
             </Container>
             <Divider my="md"/>
             <Container size="sm">
