@@ -31,7 +31,7 @@ function Panel1() {
                 justify="center"
                 align="center"
                 direction="row">
-                <UnstyledButton>
+                <UnstyledButton component="a" href="https://www.twitch.tv/yumie0306">
                     <Group>
                         <PiRabbitLight size={20}/>
                         <Title size="xl">頻道連結</Title>
@@ -41,7 +41,11 @@ function Panel1() {
             </Flex>
             <Divider my="md"/>
             <Container size="sm">
-                <Image radius="md" src="page3.jpg"/>
+                <Image radius="md" src="page3.png"/>
+            </Container>
+            <Divider my="md"/>
+            <Container size="sm">
+                <Image radius="md" src="page4.jpg"/>
             </Container>
             <Divider my="md"/>
             <Container size="sm">
