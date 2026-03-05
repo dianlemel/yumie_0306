@@ -10,7 +10,7 @@ import {
     Group,
     SimpleGrid,
     AspectRatio,
-    Stack, Tabs, Button, Flex, ActionIcon, Image
+    Stack, Tabs, Button, Flex, ActionIcon, Image, Menu
 } from '@mantine/core';
 import React, {useEffect, useState} from "react";
 import Panel1 from "@/app/tab/panel1";
@@ -27,15 +27,28 @@ function App() {
                 const text = res.Answer?.[0]?.data?.replace(/"/g, '').replace(/'/g, '"');
                 if (text) setFunding(JSON.parse(text));
             })
-            .catch(() => {});
+            .catch(() => {
+            });
     }, []);
 
     const percent = funding.total > 0 ? (funding.current / funding.total) * 100 : 0;
     const fmt = (n: number) => n.toLocaleString('zh-TW');
 
-    const onClick = () => {
-        window.open('https://p.ecpay.com.tw/FC73A75')
-    };
+    const SponsorMenu = ({fullWidth}: { fullWidth?: boolean }) => (
+        <Menu shadow="md" width={160}>
+            <Menu.Target>
+                <Button fullWidth={fullWidth} variant="filled">贊助</Button>
+            </Menu.Target>
+            <Menu.Dropdown>
+                <Menu.Item onClick={() => window.open('https://p.ecpay.com.tw/FC73A75')}>
+                    綠界贊助
+                </Menu.Item>
+                <Menu.Item onClick={() => window.open('https://paypal.me/yumie0306')}>
+                    PayPal 贊助
+                </Menu.Item>
+            </Menu.Dropdown>
+        </Menu>
+    );
 
     return (
         <Container size="lg" py="xl" h='100vh'>
@@ -105,7 +118,7 @@ function App() {
                                 須知
                             </Tabs.Tab>
                         </Tabs.List>
-                        <Button onClick={onClick} visibleFrom="sm" variant="filled">贊助</Button>
+                        <SponsorMenu/>
                     </Group>
 
                     <Tabs.Panel value="1"><Panel1/></Tabs.Panel>
@@ -124,7 +137,7 @@ function App() {
                            left: "0px",
                            borderTop: "1px solid #EDECF2",
                        }}>
-                <Button fullWidth onClick={onClick} variant="filled">贊助</Button>
+                <SponsorMenu fullWidth/>
             </Container>
         </Container>
     );
