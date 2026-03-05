@@ -47,6 +47,18 @@ const charactersList = [
             </Stack>
         ),
     },
+
+    {
+        id: 'q4',
+        label: '常見問題Q4',
+        description: '請問募資平台是即時更新的嗎?',
+        content: (
+            <Stack align="stretch" justify="flex-start">
+                <Text
+                    size="sm">募資平台金額人數是每天動態更新不是即時。</Text>
+            </Stack>
+        ),
+    },
 ];
 
 interface AccordionLabelProps {
